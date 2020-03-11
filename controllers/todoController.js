@@ -4,7 +4,7 @@ var mongoose = require('mongoose');
 var urlencodedParser = bodyParser.urlencoded({extended: false});
 
 //connect to databse
-mongoose.connect('mongodb://test:<dbpassword>@cluster0-shard-00-00-sabbu.mongodb.net:27017,cluster0-shard-00-01-sabbu.mongodb.net:27017,cluster0-shard-00-02-sabbu.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority', {useNewUrlParser: true });
+mongoose.connect('mongodb://<dbusername>:<dbpassword>@cluster0-shard-00-00-sabbu.mongodb.net:27017,cluster0-shard-00-01-sabbu.mongodb.net:27017,cluster0-shard-00-02-sabbu.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority', {useNewUrlParser: true });
 
 //creating a schema like a blueprint
 var todoSchema = new mongoose.Schema({
